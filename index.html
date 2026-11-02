@@ -401,7 +401,6 @@
 
   <div class="stats hidden" id="stats">
     <div><b id="bestVal">0</b>Best</div>
-    <div><b id="sinceVal">-</b>Started</div>
   </div>
 
   <div class="preview hidden" id="preview">
@@ -447,7 +446,7 @@
   var card = $("card"), stage = $("stage"), flameBtn = $("flameBtn"), countEl = $("count");
   var statusEl = $("status"), subEl = $("sub"), startBtn = $("startBtn");
   var progress = $("progress"), barFill = $("barFill"), pLeft = $("pLeft"), pRight = $("pRight");
-  var stats = $("stats"), bestVal = $("bestVal"), sinceVal = $("sinceVal");
+  var stats = $("stats"), bestVal = $("bestVal");
   var ripple = $("ripple"), msgEl = $("msg"), quoteEl = $("quote"), crownEl = $("crown");
 
   /* ---------- storage (safe if the browser blocks it) ---------- */
@@ -546,7 +545,6 @@
     }
 
     bestVal.textContent = state.best;
-    sinceVal.textContent = niceDate(state.startDate);
 
     if (!started) {
       statusEl.textContent = "Your flame is waiting";
